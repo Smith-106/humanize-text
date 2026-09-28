@@ -14,6 +14,7 @@
 
 [官网](https://lynote.ai) · [Product Hunt](https://www.producthunt.com/products/lynote-ai?launch=lynote-3) · [体验检测器](https://github.com/lynote-ai/ai-text-detector) · [Discord](https://discord.gg/NzcH5DYzBj) · [X](https://x.com/lynote_ai)
 <br/>
+
   ![AtomGit](https://atomgit.com/babydx/humanize-text/star/new_badge.svg)
 
 <p align="center">
@@ -271,6 +272,8 @@ examples/
 ```
 
 ---
+
+---
 ## 局限性
 
 往返翻译会损失精度。技术术语和引用可能发生漂移,越深的层级会用更多原文风格换取更多重构。如果你处理的内容对措辞精确性要求很高,请仔细核对输出,不要盲信管线。
@@ -290,9 +293,12 @@ MIT License。详情见 [LICENSE](LICENSE)。
 ---
 
 ## 支持与联系
-⭐ 国内 AtomGit 托管：https://atomgit.com/babydx/humanize-text
+
+⭐ 如果这套一体化文本拟人化工具对你有帮助，欢迎给这个仓库点个 **Star**。
+
+⭐ 国内用户也可以通过 AtomGit 镜像访问：https://atomgit.com/babydx/humanize-text
 
 🌐 访问官网 [lynote.ai](https://lynote.ai) 解锁完整高级功能。
 
-💬 有疑问、功能建议或使用问题?欢迎在 [Discussions](https://github.com/lynote-ai/humanize-text/discussions) 发起讨论。
+💬 有疑问、功能建议或使用问题？欢迎在 [Discussions](https://github.com/lynote-ai/humanize-text/discussions) 发起讨论。
 
