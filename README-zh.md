@@ -130,7 +130,7 @@ python -m src.standard.pipeline --input draft.txt
 
 - **智能层级选择** — 分析文本,逐段选择 Standard、Advanced 或 Focus
 - **自适应组合** — 可在同一文档内混合使用多个层级
-- **支持 10+ 种语言** — 英语、中文、日语、韩语、西班牙语、法语、德语等
+- **支持 80+ 种语言** — 英语、中文、日语、韩语、西班牙语、法语、德语等
 - **粘贴即用** — 无需部署,无需 API Key,无需配置
 
 <p align="center">
@@ -147,7 +147,7 @@ python -m src.standard.pipeline --input draft.txt
 - **按请求精细控制** — 10+ 种 Purpose 选项,以及 Readability(可读性)和 Detection Bypass 设置。
 - **保留格式** — 输入中的 Markdown 和换行会原样保留到输出。
 - **支持 80+ 种语言** — 英语、中文、西班牙语、葡萄牙语、法语效果尤佳。
-- **计费简单** — 按输入字数计费(每词 1 credit),输出不计费;Humanize 与 Detect 共用同一额度。新账户赠送试用额度。
+- **计费简单** — 按输入词数计费,每词 1 credit;中文按字数计,1 个字计 1 个词;输出不计费。
 
 ```bash
 curl https://api.lynote.ai/v1/humanize \

@@ -133,7 +133,7 @@ The Standard pipeline above is **one of three tiers** available. Each has differ
 
 - **Intelligent Tier Selection** — Analyzes text and picks Standard, Advanced, or Focus per-passage
 - **Adaptive Combination** — Can mix tiers within a single document
-- **10+ Languages** — English, Chinese, Japanese, Korean, Spanish, French, German, and more
+- **80+ Languages** — English, Chinese, Japanese, Korean, Spanish, French, German, and more
 - **Paste & Go** — No setup, no API keys, no configuration
 
 <p align="center">
@@ -150,7 +150,7 @@ Running this repo's pipeline means juggling LLM keys, translation engines, and y
 - **Per-request controls** — 10+ Purpose options, Readability level, and Detection Bypass settings.
 - **Formatting preserved** — Markdown and line breaks carry through to the output.
 - **80+ languages** — strongest in English, Chinese, Spanish, Portuguese, and French.
-- **Simple billing** — 1 credit per input word, output is free; Humanize and Detect share one credit balance. New accounts get trial credits.
+- **Simple billing** — 1 credit per input word (Chinese is counted per character: 1 character = 1 word); output is free.
 
 ```bash
 curl https://api.lynote.ai/v1/humanize \
