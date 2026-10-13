@@ -12,7 +12,7 @@
 [![Last commit](https://img.shields.io/github/last-commit/lynote-ai/humanize-text)](https://github.com/lynote-ai/humanize-text/commits)
 [![Open in HF Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/Lynote/free-ai-detector)
 
-[官网](https://lynote.ai) · [Product Hunt](https://www.producthunt.com/products/lynote-ai?launch=lynote-3) · [体验检测器](https://github.com/lynote-ai/ai-text-detector) · [Discord](https://discord.gg/NzcH5DYzBj) · [X](https://x.com/lynote_ai)
+[官网](https://lynote.ai) · [**Humanizer API**](https://lynote.ai/ai-humanizer-api) · [Product Hunt](https://www.producthunt.com/products/lynote-ai?launch=lynote-3) · [体验检测器](https://github.com/lynote-ai/ai-text-detector) · [Discord](https://discord.gg/NzcH5DYzBj) · [X](https://x.com/lynote_ai)
 <br/>
 
   ![AtomGit](https://atomgit.com/babydx/humanize-text/star/new_badge.svg)
@@ -27,6 +27,8 @@
 </p>
 
 </div>
+
+> 🚀 **新上线:Lynote Humanizer API。** 想在自己的应用、工作流或 SaaS 里接入拟人化能力?一个 REST 请求即可调用 Lynote 线上同款拟人化引擎,无需自己部署管线。**[获取 API Key → lynote.ai/ai-humanizer-api](https://lynote.ai/ai-humanizer-api)**
 
 ---
 
@@ -137,11 +139,37 @@ python -m src.standard.pipeline --input draft.txt
 
 ---
 
-## 三种运行方式
+## Lynote Humanizer API — 面向开发者
+
+自己跑本仓库的管线,需要配置 LLM Key、翻译引擎和服务器。如果你只是想**在自己的产品里**用上拟人化能力,[Lynote Humanizer API](https://lynote.ai/ai-humanizer-api) 通过一个接口提供与 Lynote.ai 同款的引擎:
+
+- **一次同步 REST 调用** — 发送文本,直接以 JSON 返回改写结果,无需轮询、任务队列或 Webhook。
+- **按请求精细控制** — 10+ 种 Purpose 选项,以及 Readability(可读性)和 Detection Bypass 设置。
+- **保留格式** — 输入中的 Markdown 和换行会原样保留到输出。
+- **支持 80+ 种语言** — 英语、中文、西班牙语、葡萄牙语、法语效果尤佳。
+- **计费简单** — 按输入字数计费(每词 1 credit),输出不计费;Humanize 与 Detect 共用同一额度。新账户赠送试用额度。
+
+```bash
+curl https://api.lynote.ai/v1/humanize \
+  -H "Authorization: Bearer $LYNOTE_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Your AI-generated draft here", "readability": "University", "purpose": "Academic"}'
+```
+
+<p align="center">
+  <a href="https://lynote.ai/ai-humanizer-api"><img src="https://img.shields.io/badge/获取_API_Key-Lynote_Humanizer_API-blue?style=for-the-badge" alt="获取 Lynote Humanizer API Key"></a>
+</p>
+
+套餐、速率限制和完整文档:**[lynote.ai/ai-humanizer-api](https://lynote.ai/ai-humanizer-api)**
+
+---
+
+## 运行方式
 
 | 方式 | 适合人群 | 操作 |
 |------|---------|------|
 | Lynote.ai | 所有人 — 全层级,零部署 | 访问 [lynote.ai](https://lynote.ai) |
+| **Lynote Humanizer API** | 需要在自己应用中集成拟人化的开发者 | 在 [lynote.ai/ai-humanizer-api](https://lynote.ai/ai-humanizer-api) 获取 Key |
 | n8n 工作流 | 无代码自动化用户 | 导入 [`n8n/humanize_standard.json`](n8n/humanize_standard.json) |
 | Python 脚本 | 开发者 | 见下方 |
 
@@ -318,6 +346,7 @@ examples/
 
 - [Lynote AI 检测器](https://lynote.ai/ai-detector) — 句子级评分,免费
 - [Lynote AI 拟人化](https://lynote.ai/ai-humanizer) — 本管线的托管版本
+- [Lynote Humanizer API](https://lynote.ai/ai-humanizer-api) — 以 REST API 形式接入托管版拟人化引擎
 - [Hugging Face Space](https://huggingface.co/spaces/Lynote/free-ai-detector) — 无需安装即可试用
 
 ## 开源协议
@@ -333,6 +362,8 @@ MIT License。详情见 [LICENSE](LICENSE)。
 ⭐ 国内用户也可以通过 AtomGit 镜像访问：https://atomgit.com/babydx/humanize-text
 
 🌐 访问官网 [lynote.ai](https://lynote.ai) 解锁完整高级功能。
+
+🔌 **需要 API?** 访问 [lynote.ai/ai-humanizer-api](https://lynote.ai/ai-humanizer-api) 获取 Humanizer API Key。
 
 💬 有疑问、功能建议或使用问题？欢迎在 [Discussions](https://github.com/lynote-ai/humanize-text/discussions) 发起讨论。
 

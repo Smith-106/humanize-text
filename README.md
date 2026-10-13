@@ -13,7 +13,7 @@
 [![Last commit](https://img.shields.io/github/last-commit/lynote-ai/humanize-text)](https://github.com/lynote-ai/humanize-text/commits)
 [![Open in HF Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/Lynote/free-ai-detector)
 
-[Website](https://lynote.ai) ·[Product Hunt](https://www.producthunt.com/products/lynote-ai?launch=lynote-3) · [Try the detector](https://github.com/lynote-ai/ai-text-detector) · [Discord](https://discord.gg/NzcH5DYzBj) · [X](https://x.com/lynote_ai) 
+[Website](https://lynote.ai) · [**Humanizer API**](https://lynote.ai/ai-humanizer-api) · [Product Hunt](https://www.producthunt.com/products/lynote-ai?launch=lynote-3) · [Try the detector](https://github.com/lynote-ai/ai-text-detector) · [Discord](https://discord.gg/NzcH5DYzBj) · [X](https://x.com/lynote_ai) 
 
 <p align="center">
   <img src="presentation/banner.png" alt="Humanize-Text" width="600"/>
@@ -25,6 +25,8 @@
 </p>
 
 </div>
+
+> 🚀 **New: the Lynote Humanizer API is live.** Need humanization inside your own app, workflow, or SaaS? Call Lynote's production humanizer with one REST request — no pipeline to host. **[Get an API key → lynote.ai/ai-humanizer-api](https://lynote.ai/ai-humanizer-api)**
 
 ---
 
@@ -140,11 +142,37 @@ The Standard pipeline above is **one of three tiers** available. Each has differ
 
 
 
-## Three ways to run it
+## Lynote Humanizer API — for developers
+
+Running this repo's pipeline means juggling LLM keys, translation engines, and your own infrastructure. If you just want humanization **inside your product**, the [Lynote Humanizer API](https://lynote.ai/ai-humanizer-api) gives you the same engine that powers Lynote.ai through a single endpoint:
+
+- **One synchronous REST call** — send text, get the rewrite back as JSON. No polling, job queues, or webhooks.
+- **Per-request controls** — 10+ Purpose options, Readability level, and Detection Bypass settings.
+- **Formatting preserved** — Markdown and line breaks carry through to the output.
+- **80+ languages** — strongest in English, Chinese, Spanish, Portuguese, and French.
+- **Simple billing** — 1 credit per input word, output is free; Humanize and Detect share one credit balance. New accounts get trial credits.
+
+```bash
+curl https://api.lynote.ai/v1/humanize \
+  -H "Authorization: Bearer $LYNOTE_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Your AI-generated draft here", "readability": "University", "purpose": "Academic"}'
+```
+
+<p align="center">
+  <a href="https://lynote.ai/ai-humanizer-api"><img src="https://img.shields.io/badge/Get_your_API_key-Lynote_Humanizer_API-blue?style=for-the-badge" alt="Get your Lynote Humanizer API key"></a>
+</p>
+
+Plans, rate limits, and full docs: **[lynote.ai/ai-humanizer-api](https://lynote.ai/ai-humanizer-api)**
+
+---
+
+## Ways to run it
 
 | Method | Who It's For | How |
 |--------|-------------|-----|
-| Lynote.ai | Everyone — all tiers, zero setup | Visit lynote.ai|
+| Lynote.ai | Everyone — all tiers, zero setup | Visit [lynote.ai](https://lynote.ai) |
+| **Lynote Humanizer API** | Developers adding humanization to their own app | Get a key at [lynote.ai/ai-humanizer-api](https://lynote.ai/ai-humanizer-api) |
 | n8n Workflow | No-code automation users | Import [`n8n/humanize_standard.json`](n8n/humanize_standard.json) |
 | Python Script | Developers | See below |
 
@@ -319,6 +347,7 @@ No rewriting method makes text reliably undetectable. Detectors update faster th
 
 - [Lynote AI Detector](https://lynote.ai/ai-detector) — sentence-level scoring, free
 - [Lynote AI Humanizer](https://lynote.ai/ai-humanizer) — hosted version of this pipeline
+- [Lynote Humanizer API](https://lynote.ai/ai-humanizer-api) — the hosted humanizer as a REST API for your own products
 - [Hugging Face Space](https://huggingface.co/spaces/Lynote/free-ai-detector) — try it without installing anything
 
 
@@ -332,6 +361,8 @@ MIT License. See [LICENSE](LICENSE) for details.
 ⭐ **Star this repository** if this all-in-one text humanization toolkit helps you.
 
 🌐 Visit official website [lynote.ai](https://lynote.ai) to unlock full premium features.
+
+🔌 **Need an API?** Visit [lynote.ai/ai-humanizer-api](https://lynote.ai/ai-humanizer-api) to get your Humanizer API key.
 
 💬 Have questions, feature requests or usage troubles? Feel free to start a discussion in [Discussions](https://github.com/lynote-ai/humanize-text/discussions).
 
